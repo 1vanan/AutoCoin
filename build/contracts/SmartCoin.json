@@ -398,14 +398,14 @@
     "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/SmartCoin.sol",
     "exportedSymbols": {
       "SmartCoin": [
-        321
+        425
       ]
     },
-    "id": 322,
+    "id": 426,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 304,
+        "id": 408,
         "literals": [
           "solidity",
           "^",
@@ -418,10 +418,10 @@
       {
         "absolutePath": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
         "file": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
-        "id": 305,
+        "id": 409,
         "nodeType": "ImportDirective",
-        "scope": 322,
-        "sourceUnit": 823,
+        "scope": 426,
+        "sourceUnit": 927,
         "src": "25:67:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -432,51 +432,51 @@
             "arguments": [],
             "baseName": {
               "contractScope": null,
-              "id": 306,
+              "id": 410,
               "name": "MintableToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 822,
+              "referencedDeclaration": 926,
               "src": "116:13:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MintableToken_$822",
+                "typeIdentifier": "t_contract$_MintableToken_$926",
                 "typeString": "contract MintableToken"
               }
             },
-            "id": 307,
+            "id": 411,
             "nodeType": "InheritanceSpecifier",
             "src": "116:13:3"
           }
         ],
         "contractDependencies": [
-          556,
-          652,
-          695,
-          727,
-          822,
-          1068
+          660,
+          756,
+          799,
+          831,
+          926,
+          1172
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 321,
+        "id": 425,
         "linearizedBaseContracts": [
-          321,
-          822,
-          556,
-          1068,
-          652,
-          695,
-          727
+          425,
+          926,
+          660,
+          1172,
+          756,
+          799,
+          831
         ],
         "name": "SmartCoin",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 310,
+            "id": 414,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 321,
+            "scope": 425,
             "src": "136:38:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -485,7 +485,7 @@
               "typeString": "string storage ref"
             },
             "typeName": {
-              "id": 308,
+              "id": 412,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "136:6:3",
@@ -497,7 +497,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "536d617274436f696e20746f6b656e",
-              "id": 309,
+              "id": 413,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -516,10 +516,10 @@
           },
           {
             "constant": false,
-            "id": 313,
+            "id": 417,
             "name": "symbol",
             "nodeType": "VariableDeclaration",
-            "scope": 321,
+            "scope": 425,
             "src": "181:28:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -528,7 +528,7 @@
               "typeString": "string storage ref"
             },
             "typeName": {
-              "id": 311,
+              "id": 415,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "181:6:3",
@@ -540,7 +540,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "4e4f54",
-              "id": 312,
+              "id": 416,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -559,10 +559,10 @@
           },
           {
             "constant": false,
-            "id": 316,
+            "id": 420,
             "name": "decimals",
             "nodeType": "VariableDeclaration",
-            "scope": 321,
+            "scope": 425,
             "src": "216:25:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -571,7 +571,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 314,
+              "id": 418,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "216:4:3",
@@ -583,7 +583,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3138",
-              "id": 315,
+              "id": 419,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -602,13 +602,13 @@
           },
           {
             "body": {
-              "id": 319,
+              "id": 423,
               "nodeType": "Block",
               "src": "268:8:3",
               "statements": []
             },
             "documentation": null,
-            "id": 320,
+            "id": 424,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -616,26 +616,26 @@
             "name": "SmartCoin",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 317,
+              "id": 421,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "266:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 318,
+              "id": 422,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "268:0:3"
             },
-            "scope": 321,
+            "scope": 425,
             "src": "248:28:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 322,
+        "scope": 426,
         "src": "94:184:3"
       }
     ],
@@ -645,14 +645,14 @@
     "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/SmartCoin.sol",
     "exportedSymbols": {
       "SmartCoin": [
-        321
+        425
       ]
     },
-    "id": 322,
+    "id": 426,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 304,
+        "id": 408,
         "literals": [
           "solidity",
           "^",
@@ -665,10 +665,10 @@
       {
         "absolutePath": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
         "file": "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol",
-        "id": 305,
+        "id": 409,
         "nodeType": "ImportDirective",
-        "scope": 322,
-        "sourceUnit": 823,
+        "scope": 426,
+        "sourceUnit": 927,
         "src": "25:67:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -679,51 +679,51 @@
             "arguments": [],
             "baseName": {
               "contractScope": null,
-              "id": 306,
+              "id": 410,
               "name": "MintableToken",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 822,
+              "referencedDeclaration": 926,
               "src": "116:13:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MintableToken_$822",
+                "typeIdentifier": "t_contract$_MintableToken_$926",
                 "typeString": "contract MintableToken"
               }
             },
-            "id": 307,
+            "id": 411,
             "nodeType": "InheritanceSpecifier",
             "src": "116:13:3"
           }
         ],
         "contractDependencies": [
-          556,
-          652,
-          695,
-          727,
-          822,
-          1068
+          660,
+          756,
+          799,
+          831,
+          926,
+          1172
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 321,
+        "id": 425,
         "linearizedBaseContracts": [
-          321,
-          822,
-          556,
-          1068,
-          652,
-          695,
-          727
+          425,
+          926,
+          660,
+          1172,
+          756,
+          799,
+          831
         ],
         "name": "SmartCoin",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 310,
+            "id": 414,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 321,
+            "scope": 425,
             "src": "136:38:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -732,7 +732,7 @@
               "typeString": "string storage ref"
             },
             "typeName": {
-              "id": 308,
+              "id": 412,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "136:6:3",
@@ -744,7 +744,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "536d617274436f696e20746f6b656e",
-              "id": 309,
+              "id": 413,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -763,10 +763,10 @@
           },
           {
             "constant": false,
-            "id": 313,
+            "id": 417,
             "name": "symbol",
             "nodeType": "VariableDeclaration",
-            "scope": 321,
+            "scope": 425,
             "src": "181:28:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -775,7 +775,7 @@
               "typeString": "string storage ref"
             },
             "typeName": {
-              "id": 311,
+              "id": 415,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "181:6:3",
@@ -787,7 +787,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "4e4f54",
-              "id": 312,
+              "id": 416,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -806,10 +806,10 @@
           },
           {
             "constant": false,
-            "id": 316,
+            "id": 420,
             "name": "decimals",
             "nodeType": "VariableDeclaration",
-            "scope": 321,
+            "scope": 425,
             "src": "216:25:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -818,7 +818,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 314,
+              "id": 418,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "216:4:3",
@@ -830,7 +830,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3138",
-              "id": 315,
+              "id": 419,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -849,13 +849,13 @@
           },
           {
             "body": {
-              "id": 319,
+              "id": 423,
               "nodeType": "Block",
               "src": "268:8:3",
               "statements": []
             },
             "documentation": null,
-            "id": 320,
+            "id": 424,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -863,26 +863,26 @@
             "name": "SmartCoin",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 317,
+              "id": 421,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "266:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 318,
+              "id": 422,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "268:0:3"
             },
-            "scope": 321,
+            "scope": 425,
             "src": "248:28:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 322,
+        "scope": 426,
         "src": "94:184:3"
       }
     ],
@@ -894,5 +894,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-22T15:48:36.008Z"
+  "updatedAt": "2018-04-22T19:16:19.856Z"
 }

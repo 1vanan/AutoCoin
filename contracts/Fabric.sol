@@ -6,6 +6,8 @@ import './Specifications.sol';
 contract Fabric {
     mapping(uint => uint) public priceList;
 
+    address legal;
+
     function Fabric(){
         generatePrices();
     }
@@ -31,6 +33,14 @@ contract Fabric {
         require(priceList[uint(spec.getModel())] < price);
 
         return new Car(spec);
+    }
+
+    function getPrice(Specifications.Model model) returns (uint){
+        return priceList[uint(model)];
+    }
+
+    function setAddress(address addr){
+        legal = addr;
     }
 
     function getCar(uint price, Specifications.Model model, Specifications.Color color) public returns (Car){
