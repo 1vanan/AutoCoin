@@ -1,0 +1,915 @@
+{
+  "contractName": "Car",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "s",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "carOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6040516020806102788339810160405280805190602001909190505080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506101fc8061007c6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806313af40351461005c578063893d20e8146100955780638da5cb5b146100ea575b600080fd5b341561006757600080fd5b610093600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061013f565b005b34156100a057600080fd5b6100a8610182565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156100f557600080fd5b6100fd6101ab565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a72305820d45c3972ca255868b6f581a2152a6f703589e83fbf371134dbc658fd38c09c7f0029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806313af40351461005c578063893d20e8146100955780638da5cb5b146100ea575b600080fd5b341561006757600080fd5b610093600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061013f565b005b34156100a057600080fd5b6100a8610182565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156100f557600080fd5b6100fd6101ab565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a72305820d45c3972ca255868b6f581a2152a6f703589e83fbf371134dbc658fd38c09c7f0029",
+  "sourceMap": "85:314:0:-;;;162:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;218:1;210:5;;:9;;;;;;;;;;;;;;;;;;162:64;85:314;;;;;;",
+  "deployedSourceMap": "85:314:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;232:80;;;;;;;;;;;;;;;;;;;;;;;;;;;;318:77;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;104:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;232:80;297:8;289:5;;:16;;;;;;;;;;;;;;;;;;232:80;:::o;318:77::-;354:11;383:5;;;;;;;;;;;376:12;;318:77;:::o;104:24::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.0;\n\nimport \"./Participant.sol\";\nimport \"./Specifications.sol\";\n\ncontract Car {\n    Participant public owner;\n\n    Specifications specs;\n\n    function Car(Specifications s) public {\n        specs = s;\n    }\n\n    function setOwner(Participant carOwner) public {\n        owner = carOwner;\n    }\n\n    function getOwner() public returns (Participant){\n        return owner;\n    }\n\n\n}\n",
+  "sourcePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Car.sol",
+  "ast": {
+    "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Car.sol",
+    "exportedSymbols": {
+      "Car": [
+        36
+      ]
+    },
+    "id": 37,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Participant.sol",
+        "file": "./Participant.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 37,
+        "sourceUnit": 303,
+        "src": "25:27:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Specifications.sol",
+        "file": "./Specifications.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 37,
+        "sourceUnit": 407,
+        "src": "53:30:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 36,
+        "linearizedBaseContracts": [
+          36
+        ],
+        "name": "Car",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 36,
+            "src": "104:24:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Participant_$302",
+              "typeString": "contract Participant"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "Participant",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 302,
+              "src": "104:11:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Participant_$302",
+                "typeString": "contract Participant"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7,
+            "name": "specs",
+            "nodeType": "VariableDeclaration",
+            "scope": 36,
+            "src": "135:20:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Specifications_$406",
+              "typeString": "contract Specifications"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6,
+              "name": "Specifications",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 406,
+              "src": "135:14:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Specifications_$406",
+                "typeString": "contract Specifications"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 16,
+              "nodeType": "Block",
+              "src": "200:26:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 12,
+                      "name": "specs",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "210:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Specifications_$406",
+                        "typeString": "contract Specifications"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 13,
+                      "name": "s",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "218:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Specifications_$406",
+                        "typeString": "contract Specifications"
+                      }
+                    },
+                    "src": "210:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Specifications_$406",
+                      "typeString": "contract Specifications"
+                    }
+                  },
+                  "id": 15,
+                  "nodeType": "ExpressionStatement",
+                  "src": "210:9:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 17,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "Car",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9,
+                  "name": "s",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 17,
+                  "src": "175:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Specifications_$406",
+                    "typeString": "contract Specifications"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 8,
+                    "name": "Specifications",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 406,
+                    "src": "175:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Specifications_$406",
+                      "typeString": "contract Specifications"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "174:18:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "200:0:0"
+            },
+            "scope": 36,
+            "src": "162:64:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 26,
+              "nodeType": "Block",
+              "src": "279:33:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 24,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 22,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "289:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Participant_$302",
+                        "typeString": "contract Participant"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 23,
+                      "name": "carOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19,
+                      "src": "297:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Participant_$302",
+                        "typeString": "contract Participant"
+                      }
+                    },
+                    "src": "289:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Participant_$302",
+                      "typeString": "contract Participant"
+                    }
+                  },
+                  "id": 25,
+                  "nodeType": "ExpressionStatement",
+                  "src": "289:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19,
+                  "name": "carOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27,
+                  "src": "250:20:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Participant_$302",
+                    "typeString": "contract Participant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 18,
+                    "name": "Participant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 302,
+                    "src": "250:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Participant_$302",
+                      "typeString": "contract Participant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "249:22:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 21,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "279:0:0"
+            },
+            "scope": 36,
+            "src": "232:80:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 34,
+              "nodeType": "Block",
+              "src": "366:29:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 32,
+                    "name": "owner",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5,
+                    "src": "383:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Participant_$302",
+                      "typeString": "contract Participant"
+                    }
+                  },
+                  "functionReturnParameters": 31,
+                  "id": 33,
+                  "nodeType": "Return",
+                  "src": "376:12:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 35,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "getOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "335:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "354:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Participant_$302",
+                    "typeString": "contract Participant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 29,
+                    "name": "Participant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 302,
+                    "src": "354:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Participant_$302",
+                      "typeString": "contract Participant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "353:13:0"
+            },
+            "scope": 36,
+            "src": "318:77:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 37,
+        "src": "85:314:0"
+      }
+    ],
+    "src": "0:400:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Car.sol",
+    "exportedSymbols": {
+      "Car": [
+        36
+      ]
+    },
+    "id": 37,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Participant.sol",
+        "file": "./Participant.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 37,
+        "sourceUnit": 303,
+        "src": "25:27:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Specifications.sol",
+        "file": "./Specifications.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 37,
+        "sourceUnit": 407,
+        "src": "53:30:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 36,
+        "linearizedBaseContracts": [
+          36
+        ],
+        "name": "Car",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 36,
+            "src": "104:24:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Participant_$302",
+              "typeString": "contract Participant"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "Participant",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 302,
+              "src": "104:11:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Participant_$302",
+                "typeString": "contract Participant"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7,
+            "name": "specs",
+            "nodeType": "VariableDeclaration",
+            "scope": 36,
+            "src": "135:20:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Specifications_$406",
+              "typeString": "contract Specifications"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6,
+              "name": "Specifications",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 406,
+              "src": "135:14:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Specifications_$406",
+                "typeString": "contract Specifications"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 16,
+              "nodeType": "Block",
+              "src": "200:26:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 12,
+                      "name": "specs",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "210:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Specifications_$406",
+                        "typeString": "contract Specifications"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 13,
+                      "name": "s",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "218:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Specifications_$406",
+                        "typeString": "contract Specifications"
+                      }
+                    },
+                    "src": "210:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Specifications_$406",
+                      "typeString": "contract Specifications"
+                    }
+                  },
+                  "id": 15,
+                  "nodeType": "ExpressionStatement",
+                  "src": "210:9:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 17,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "Car",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9,
+                  "name": "s",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 17,
+                  "src": "175:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Specifications_$406",
+                    "typeString": "contract Specifications"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 8,
+                    "name": "Specifications",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 406,
+                    "src": "175:14:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Specifications_$406",
+                      "typeString": "contract Specifications"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "174:18:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "200:0:0"
+            },
+            "scope": 36,
+            "src": "162:64:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 26,
+              "nodeType": "Block",
+              "src": "279:33:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 24,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 22,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "289:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Participant_$302",
+                        "typeString": "contract Participant"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 23,
+                      "name": "carOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19,
+                      "src": "297:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Participant_$302",
+                        "typeString": "contract Participant"
+                      }
+                    },
+                    "src": "289:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Participant_$302",
+                      "typeString": "contract Participant"
+                    }
+                  },
+                  "id": 25,
+                  "nodeType": "ExpressionStatement",
+                  "src": "289:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 19,
+                  "name": "carOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27,
+                  "src": "250:20:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Participant_$302",
+                    "typeString": "contract Participant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 18,
+                    "name": "Participant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 302,
+                    "src": "250:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Participant_$302",
+                      "typeString": "contract Participant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "249:22:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 21,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "279:0:0"
+            },
+            "scope": 36,
+            "src": "232:80:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 34,
+              "nodeType": "Block",
+              "src": "366:29:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 32,
+                    "name": "owner",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5,
+                    "src": "383:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Participant_$302",
+                      "typeString": "contract Participant"
+                    }
+                  },
+                  "functionReturnParameters": 31,
+                  "id": 33,
+                  "nodeType": "Return",
+                  "src": "376:12:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 35,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "getOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "335:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "354:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Participant_$302",
+                    "typeString": "contract Participant"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 29,
+                    "name": "Participant",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 302,
+                    "src": "354:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Participant_$302",
+                      "typeString": "contract Participant"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "353:13:0"
+            },
+            "scope": 36,
+            "src": "318:77:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 37,
+        "src": "85:314:0"
+      }
+    ],
+    "src": "0:400:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-22T15:48:35.995Z"
+}

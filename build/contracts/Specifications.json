@@ -1,0 +1,1921 @@
+{
+  "contractName": "Specifications",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "mileage",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "torque",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "hp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "c",
+          "type": "uint8"
+        },
+        {
+          "name": "m",
+          "type": "uint8"
+        },
+        {
+          "name": "ch",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getColor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getModel",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60606040526004600081548110151561001457fe5b9060005260206000209001546000556004600181548110151561003357fe5b9060005260206000209001546001556004600281548110151561005257fe5b906000526020600020900154600255341561006c57600080fd5b6040516103473803806103478339810160405280805190602001909190805190602001909190805182019190505082600360006101000a81548160ff021916908360048111156100b857fe5b021790555081600360016101000a81548160ff0219169083600d8111156100db57fe5b021790555080600490805190602001906100f69291906100ff565b50505050610171565b82805482825590600052602060002090810192821561013b579160200282015b8281111561013a57825182559160200191906001019061011f565b5b509050610148919061014c565b5090565b61016e91905b8082111561016a576000816000905550600101610152565b5090565b90565b6101c7806101806000396000f30060606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806315585289146100725780639a86139b1461009b578063a0bfa1e0146100d2578063a29b6c1214610109578063d8124c5f14610132575b600080fd5b341561007d57600080fd5b61008561015b565b6040518082815260200191505060405180910390f35b34156100a657600080fd5b6100ae610161565b604051808260048111156100be57fe5b60ff16815260200191505060405180910390f35b34156100dd57600080fd5b6100e5610178565b6040518082600d8111156100f557fe5b60ff16815260200191505060405180910390f35b341561011457600080fd5b61011c61018f565b6040518082815260200191505060405180910390f35b341561013d57600080fd5b610145610195565b6040518082815260200191505060405180910390f35b60005481565b6000600360009054906101000a900460ff16905090565b6000600360019054906101000a900460ff16905090565b60025481565b600154815600a165627a7a7230582070e4ed0b90487f0d213e748cc8e1cd7fbc6f3c8c9b8ec5b0e2746504901cd2ba0029",
+  "deployedBytecode": "0x60606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806315585289146100725780639a86139b1461009b578063a0bfa1e0146100d2578063a29b6c1214610109578063d8124c5f14610132575b600080fd5b341561007d57600080fd5b61008561015b565b6040518082815260200191505060405180910390f35b34156100a657600080fd5b6100ae610161565b604051808260048111156100be57fe5b60ff16815260200191505060405180910390f35b34156100dd57600080fd5b6100e5610178565b6040518082600d8111156100f557fe5b60ff16815260200191505060405180910390f35b341561011457600080fd5b61011c61018f565b6040518082815260200191505060405180910390f35b341561013d57600080fd5b610145610195565b6040518082815260200191505060405180910390f35b60005481565b6000600360009054906101000a900460ff16905090565b6000600360019054906101000a900460ff16905090565b60025481565b600154815600a165627a7a7230582070e4ed0b90487f0d213e748cc8e1cd7fbc6f3c8c9b8ec5b0e2746504901cd2ba0029",
+  "sourceMap": "25:686:4:-;;;77:15;93:1;77:18;;;;;;;;;;;;;;;;;;;55:40;;119:15;135:1;119:18;;;;;;;;;;;;;;;;;;;102:35;;165:15;181:1;165:18;;;;;;;;;;;;;;;;;;;144:39;;432:137;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;510:1;502:5;;:9;;;;;;;;;;;;;;;;;;;;;;;;530:1;522:5;;:9;;;;;;;;;;;;;;;;;;;;;;;;560:2;542:15;:20;;;;;;;;;;;;:::i;:::-;;432:137;;;25:686;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "25:686:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;55:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;575:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;645;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;144:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;102:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;55:40;;;;:::o;575:64::-;604:5;627;;;;;;;;;;;620:12;;575:64;:::o;645:::-;674:5;697;;;;;;;;;;;690:12;;645:64;:::o;144:39::-;;;;:::o;102:35::-;;;;:::o",
+  "source": "pragma solidity ^0.4.0;\n\ncontract Specifications {\n    uint public mileage = characteristics[0];\n\n    uint public hp = characteristics[1];\n\n    uint public torque = characteristics[2];\n\n    enum Color {RED, BLUE, YELLOW, WHITE, BLACK}\n\n    enum Model {WV, SKODA, MERCEDES, PEUGEOT, FIAT, FORD, TOYOTA, NISSAN, RENAULT,\n        CHEVROLET, HYUNDAY, VAZ, UAZ, GAZ}\n\n    Color color;\n\n    Model model;\n\n    uint[] characteristics;\n\n    function Specifications(Color c, Model m, uint[] ch) public {\n        color = c;\n\n        model = m;\n\n        characteristics = ch;\n    }\n\n    function getColor() returns (Color){\n        return color;\n    }\n\n    function getModel() returns (Model){\n        return model;\n    }\n}\n",
+  "sourcePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Specifications.sol",
+  "ast": {
+    "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Specifications.sol",
+    "exportedSymbols": {
+      "Specifications": [
+        406
+      ]
+    },
+    "id": 407,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 323,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 406,
+        "linearizedBaseContracts": [
+          406
+        ],
+        "name": "Specifications",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 328,
+            "name": "mileage",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "55:40:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 324,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "55:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "baseExpression": {
+                "argumentTypes": null,
+                "id": 325,
+                "name": "characteristics",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 366,
+                "src": "77:15:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                  "typeString": "uint256[] storage ref"
+                }
+              },
+              "id": 327,
+              "indexExpression": {
+                "argumentTypes": null,
+                "hexValue": "30",
+                "id": 326,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "93:1:4",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_0_by_1",
+                  "typeString": "int_const 0"
+                },
+                "value": "0"
+              },
+              "isConstant": false,
+              "isLValue": true,
+              "isPure": false,
+              "lValueRequested": false,
+              "nodeType": "IndexAccess",
+              "src": "77:18:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 333,
+            "name": "hp",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "102:35:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 329,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "102:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "baseExpression": {
+                "argumentTypes": null,
+                "id": 330,
+                "name": "characteristics",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 366,
+                "src": "119:15:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                  "typeString": "uint256[] storage ref"
+                }
+              },
+              "id": 332,
+              "indexExpression": {
+                "argumentTypes": null,
+                "hexValue": "31",
+                "id": 331,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "135:1:4",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_1_by_1",
+                  "typeString": "int_const 1"
+                },
+                "value": "1"
+              },
+              "isConstant": false,
+              "isLValue": true,
+              "isPure": false,
+              "lValueRequested": false,
+              "nodeType": "IndexAccess",
+              "src": "119:18:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 338,
+            "name": "torque",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "144:39:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 334,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "144:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "baseExpression": {
+                "argumentTypes": null,
+                "id": 335,
+                "name": "characteristics",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 366,
+                "src": "165:15:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                  "typeString": "uint256[] storage ref"
+                }
+              },
+              "id": 337,
+              "indexExpression": {
+                "argumentTypes": null,
+                "hexValue": "32",
+                "id": 336,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "181:1:4",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_2_by_1",
+                  "typeString": "int_const 2"
+                },
+                "value": "2"
+              },
+              "isConstant": false,
+              "isLValue": true,
+              "isPure": false,
+              "lValueRequested": false,
+              "nodeType": "IndexAccess",
+              "src": "165:18:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Specifications.Color",
+            "id": 344,
+            "members": [
+              {
+                "id": 339,
+                "name": "RED",
+                "nodeType": "EnumValue",
+                "src": "202:3:4"
+              },
+              {
+                "id": 340,
+                "name": "BLUE",
+                "nodeType": "EnumValue",
+                "src": "207:4:4"
+              },
+              {
+                "id": 341,
+                "name": "YELLOW",
+                "nodeType": "EnumValue",
+                "src": "213:6:4"
+              },
+              {
+                "id": 342,
+                "name": "WHITE",
+                "nodeType": "EnumValue",
+                "src": "221:5:4"
+              },
+              {
+                "id": 343,
+                "name": "BLACK",
+                "nodeType": "EnumValue",
+                "src": "228:5:4"
+              }
+            ],
+            "name": "Color",
+            "nodeType": "EnumDefinition",
+            "src": "190:44:4"
+          },
+          {
+            "canonicalName": "Specifications.Model",
+            "id": 359,
+            "members": [
+              {
+                "id": 345,
+                "name": "WV",
+                "nodeType": "EnumValue",
+                "src": "252:2:4"
+              },
+              {
+                "id": 346,
+                "name": "SKODA",
+                "nodeType": "EnumValue",
+                "src": "256:5:4"
+              },
+              {
+                "id": 347,
+                "name": "MERCEDES",
+                "nodeType": "EnumValue",
+                "src": "263:8:4"
+              },
+              {
+                "id": 348,
+                "name": "PEUGEOT",
+                "nodeType": "EnumValue",
+                "src": "273:7:4"
+              },
+              {
+                "id": 349,
+                "name": "FIAT",
+                "nodeType": "EnumValue",
+                "src": "282:4:4"
+              },
+              {
+                "id": 350,
+                "name": "FORD",
+                "nodeType": "EnumValue",
+                "src": "288:4:4"
+              },
+              {
+                "id": 351,
+                "name": "TOYOTA",
+                "nodeType": "EnumValue",
+                "src": "294:6:4"
+              },
+              {
+                "id": 352,
+                "name": "NISSAN",
+                "nodeType": "EnumValue",
+                "src": "302:6:4"
+              },
+              {
+                "id": 353,
+                "name": "RENAULT",
+                "nodeType": "EnumValue",
+                "src": "310:7:4"
+              },
+              {
+                "id": 354,
+                "name": "CHEVROLET",
+                "nodeType": "EnumValue",
+                "src": "327:9:4"
+              },
+              {
+                "id": 355,
+                "name": "HYUNDAY",
+                "nodeType": "EnumValue",
+                "src": "338:7:4"
+              },
+              {
+                "id": 356,
+                "name": "VAZ",
+                "nodeType": "EnumValue",
+                "src": "347:3:4"
+              },
+              {
+                "id": 357,
+                "name": "UAZ",
+                "nodeType": "EnumValue",
+                "src": "352:3:4"
+              },
+              {
+                "id": 358,
+                "name": "GAZ",
+                "nodeType": "EnumValue",
+                "src": "357:3:4"
+              }
+            ],
+            "name": "Model",
+            "nodeType": "EnumDefinition",
+            "src": "240:121:4"
+          },
+          {
+            "constant": false,
+            "id": 361,
+            "name": "color",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "367:11:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Color_$344",
+              "typeString": "enum Specifications.Color"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 360,
+              "name": "Color",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 344,
+              "src": "367:5:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Color_$344",
+                "typeString": "enum Specifications.Color"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 363,
+            "name": "model",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "385:11:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Model_$359",
+              "typeString": "enum Specifications.Model"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 362,
+              "name": "Model",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 359,
+              "src": "385:5:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Model_$359",
+                "typeString": "enum Specifications.Model"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 366,
+            "name": "characteristics",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "403:22:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+              "typeString": "uint256[] storage ref"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 364,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "403:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 365,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "403:6:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[] storage pointer"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 388,
+              "nodeType": "Block",
+              "src": "492:77:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 378,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 376,
+                      "name": "color",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 361,
+                      "src": "502:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Color_$344",
+                        "typeString": "enum Specifications.Color"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 377,
+                      "name": "c",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 368,
+                      "src": "510:1:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Color_$344",
+                        "typeString": "enum Specifications.Color"
+                      }
+                    },
+                    "src": "502:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Color_$344",
+                      "typeString": "enum Specifications.Color"
+                    }
+                  },
+                  "id": 379,
+                  "nodeType": "ExpressionStatement",
+                  "src": "502:9:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 382,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 380,
+                      "name": "model",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 363,
+                      "src": "522:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Model_$359",
+                        "typeString": "enum Specifications.Model"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 381,
+                      "name": "m",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 370,
+                      "src": "530:1:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Model_$359",
+                        "typeString": "enum Specifications.Model"
+                      }
+                    },
+                    "src": "522:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Model_$359",
+                      "typeString": "enum Specifications.Model"
+                    }
+                  },
+                  "id": 383,
+                  "nodeType": "ExpressionStatement",
+                  "src": "522:9:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 386,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 384,
+                      "name": "characteristics",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 366,
+                      "src": "542:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                        "typeString": "uint256[] storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 385,
+                      "name": "ch",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 373,
+                      "src": "560:2:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                        "typeString": "uint256[] memory"
+                      }
+                    },
+                    "src": "542:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                      "typeString": "uint256[] storage ref"
+                    }
+                  },
+                  "id": 387,
+                  "nodeType": "ExpressionStatement",
+                  "src": "542:20:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 389,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "Specifications",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 368,
+                  "name": "c",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 389,
+                  "src": "456:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Color_$344",
+                    "typeString": "enum Specifications.Color"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 367,
+                    "name": "Color",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 344,
+                    "src": "456:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Color_$344",
+                      "typeString": "enum Specifications.Color"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 370,
+                  "name": "m",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 389,
+                  "src": "465:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Model_$359",
+                    "typeString": "enum Specifications.Model"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 369,
+                    "name": "Model",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 359,
+                    "src": "465:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Model_$359",
+                      "typeString": "enum Specifications.Model"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 373,
+                  "name": "ch",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 389,
+                  "src": "474:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 371,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "474:4:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 372,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "474:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "455:29:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 375,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "492:0:4"
+            },
+            "scope": 406,
+            "src": "432:137:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 396,
+              "nodeType": "Block",
+              "src": "610:29:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 394,
+                    "name": "color",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 361,
+                    "src": "627:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Color_$344",
+                      "typeString": "enum Specifications.Color"
+                    }
+                  },
+                  "functionReturnParameters": 393,
+                  "id": 395,
+                  "nodeType": "Return",
+                  "src": "620:12:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 397,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "getColor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 390,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "592:2:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 393,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 392,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 397,
+                  "src": "604:5:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Color_$344",
+                    "typeString": "enum Specifications.Color"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 391,
+                    "name": "Color",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 344,
+                    "src": "604:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Color_$344",
+                      "typeString": "enum Specifications.Color"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "603:7:4"
+            },
+            "scope": 406,
+            "src": "575:64:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 404,
+              "nodeType": "Block",
+              "src": "680:29:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 402,
+                    "name": "model",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 363,
+                    "src": "697:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Model_$359",
+                      "typeString": "enum Specifications.Model"
+                    }
+                  },
+                  "functionReturnParameters": 401,
+                  "id": 403,
+                  "nodeType": "Return",
+                  "src": "690:12:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 405,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "getModel",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 398,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "662:2:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 401,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 400,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 405,
+                  "src": "674:5:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Model_$359",
+                    "typeString": "enum Specifications.Model"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 399,
+                    "name": "Model",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 359,
+                    "src": "674:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Model_$359",
+                      "typeString": "enum Specifications.Model"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "673:7:4"
+            },
+            "scope": 406,
+            "src": "645:64:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 407,
+        "src": "25:686:4"
+      }
+    ],
+    "src": "0:712:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ivanan/Documents/workspace/AutoCoin/contracts/Specifications.sol",
+    "exportedSymbols": {
+      "Specifications": [
+        406
+      ]
+    },
+    "id": 407,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 323,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 406,
+        "linearizedBaseContracts": [
+          406
+        ],
+        "name": "Specifications",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 328,
+            "name": "mileage",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "55:40:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 324,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "55:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "baseExpression": {
+                "argumentTypes": null,
+                "id": 325,
+                "name": "characteristics",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 366,
+                "src": "77:15:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                  "typeString": "uint256[] storage ref"
+                }
+              },
+              "id": 327,
+              "indexExpression": {
+                "argumentTypes": null,
+                "hexValue": "30",
+                "id": 326,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "93:1:4",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_0_by_1",
+                  "typeString": "int_const 0"
+                },
+                "value": "0"
+              },
+              "isConstant": false,
+              "isLValue": true,
+              "isPure": false,
+              "lValueRequested": false,
+              "nodeType": "IndexAccess",
+              "src": "77:18:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 333,
+            "name": "hp",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "102:35:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 329,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "102:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "baseExpression": {
+                "argumentTypes": null,
+                "id": 330,
+                "name": "characteristics",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 366,
+                "src": "119:15:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                  "typeString": "uint256[] storage ref"
+                }
+              },
+              "id": 332,
+              "indexExpression": {
+                "argumentTypes": null,
+                "hexValue": "31",
+                "id": 331,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "135:1:4",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_1_by_1",
+                  "typeString": "int_const 1"
+                },
+                "value": "1"
+              },
+              "isConstant": false,
+              "isLValue": true,
+              "isPure": false,
+              "lValueRequested": false,
+              "nodeType": "IndexAccess",
+              "src": "119:18:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 338,
+            "name": "torque",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "144:39:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 334,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "144:4:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "baseExpression": {
+                "argumentTypes": null,
+                "id": 335,
+                "name": "characteristics",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 366,
+                "src": "165:15:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                  "typeString": "uint256[] storage ref"
+                }
+              },
+              "id": 337,
+              "indexExpression": {
+                "argumentTypes": null,
+                "hexValue": "32",
+                "id": 336,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "181:1:4",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_2_by_1",
+                  "typeString": "int_const 2"
+                },
+                "value": "2"
+              },
+              "isConstant": false,
+              "isLValue": true,
+              "isPure": false,
+              "lValueRequested": false,
+              "nodeType": "IndexAccess",
+              "src": "165:18:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Specifications.Color",
+            "id": 344,
+            "members": [
+              {
+                "id": 339,
+                "name": "RED",
+                "nodeType": "EnumValue",
+                "src": "202:3:4"
+              },
+              {
+                "id": 340,
+                "name": "BLUE",
+                "nodeType": "EnumValue",
+                "src": "207:4:4"
+              },
+              {
+                "id": 341,
+                "name": "YELLOW",
+                "nodeType": "EnumValue",
+                "src": "213:6:4"
+              },
+              {
+                "id": 342,
+                "name": "WHITE",
+                "nodeType": "EnumValue",
+                "src": "221:5:4"
+              },
+              {
+                "id": 343,
+                "name": "BLACK",
+                "nodeType": "EnumValue",
+                "src": "228:5:4"
+              }
+            ],
+            "name": "Color",
+            "nodeType": "EnumDefinition",
+            "src": "190:44:4"
+          },
+          {
+            "canonicalName": "Specifications.Model",
+            "id": 359,
+            "members": [
+              {
+                "id": 345,
+                "name": "WV",
+                "nodeType": "EnumValue",
+                "src": "252:2:4"
+              },
+              {
+                "id": 346,
+                "name": "SKODA",
+                "nodeType": "EnumValue",
+                "src": "256:5:4"
+              },
+              {
+                "id": 347,
+                "name": "MERCEDES",
+                "nodeType": "EnumValue",
+                "src": "263:8:4"
+              },
+              {
+                "id": 348,
+                "name": "PEUGEOT",
+                "nodeType": "EnumValue",
+                "src": "273:7:4"
+              },
+              {
+                "id": 349,
+                "name": "FIAT",
+                "nodeType": "EnumValue",
+                "src": "282:4:4"
+              },
+              {
+                "id": 350,
+                "name": "FORD",
+                "nodeType": "EnumValue",
+                "src": "288:4:4"
+              },
+              {
+                "id": 351,
+                "name": "TOYOTA",
+                "nodeType": "EnumValue",
+                "src": "294:6:4"
+              },
+              {
+                "id": 352,
+                "name": "NISSAN",
+                "nodeType": "EnumValue",
+                "src": "302:6:4"
+              },
+              {
+                "id": 353,
+                "name": "RENAULT",
+                "nodeType": "EnumValue",
+                "src": "310:7:4"
+              },
+              {
+                "id": 354,
+                "name": "CHEVROLET",
+                "nodeType": "EnumValue",
+                "src": "327:9:4"
+              },
+              {
+                "id": 355,
+                "name": "HYUNDAY",
+                "nodeType": "EnumValue",
+                "src": "338:7:4"
+              },
+              {
+                "id": 356,
+                "name": "VAZ",
+                "nodeType": "EnumValue",
+                "src": "347:3:4"
+              },
+              {
+                "id": 357,
+                "name": "UAZ",
+                "nodeType": "EnumValue",
+                "src": "352:3:4"
+              },
+              {
+                "id": 358,
+                "name": "GAZ",
+                "nodeType": "EnumValue",
+                "src": "357:3:4"
+              }
+            ],
+            "name": "Model",
+            "nodeType": "EnumDefinition",
+            "src": "240:121:4"
+          },
+          {
+            "constant": false,
+            "id": 361,
+            "name": "color",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "367:11:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Color_$344",
+              "typeString": "enum Specifications.Color"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 360,
+              "name": "Color",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 344,
+              "src": "367:5:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Color_$344",
+                "typeString": "enum Specifications.Color"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 363,
+            "name": "model",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "385:11:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Model_$359",
+              "typeString": "enum Specifications.Model"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 362,
+              "name": "Model",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 359,
+              "src": "385:5:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Model_$359",
+                "typeString": "enum Specifications.Model"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 366,
+            "name": "characteristics",
+            "nodeType": "VariableDeclaration",
+            "scope": 406,
+            "src": "403:22:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+              "typeString": "uint256[] storage ref"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 364,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "403:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 365,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "403:6:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[] storage pointer"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 388,
+              "nodeType": "Block",
+              "src": "492:77:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 378,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 376,
+                      "name": "color",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 361,
+                      "src": "502:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Color_$344",
+                        "typeString": "enum Specifications.Color"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 377,
+                      "name": "c",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 368,
+                      "src": "510:1:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Color_$344",
+                        "typeString": "enum Specifications.Color"
+                      }
+                    },
+                    "src": "502:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Color_$344",
+                      "typeString": "enum Specifications.Color"
+                    }
+                  },
+                  "id": 379,
+                  "nodeType": "ExpressionStatement",
+                  "src": "502:9:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 382,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 380,
+                      "name": "model",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 363,
+                      "src": "522:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Model_$359",
+                        "typeString": "enum Specifications.Model"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 381,
+                      "name": "m",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 370,
+                      "src": "530:1:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Model_$359",
+                        "typeString": "enum Specifications.Model"
+                      }
+                    },
+                    "src": "522:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Model_$359",
+                      "typeString": "enum Specifications.Model"
+                    }
+                  },
+                  "id": 383,
+                  "nodeType": "ExpressionStatement",
+                  "src": "522:9:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 386,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 384,
+                      "name": "characteristics",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 366,
+                      "src": "542:15:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                        "typeString": "uint256[] storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 385,
+                      "name": "ch",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 373,
+                      "src": "560:2:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                        "typeString": "uint256[] memory"
+                      }
+                    },
+                    "src": "542:20:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                      "typeString": "uint256[] storage ref"
+                    }
+                  },
+                  "id": 387,
+                  "nodeType": "ExpressionStatement",
+                  "src": "542:20:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 389,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "Specifications",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 374,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 368,
+                  "name": "c",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 389,
+                  "src": "456:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Color_$344",
+                    "typeString": "enum Specifications.Color"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 367,
+                    "name": "Color",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 344,
+                    "src": "456:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Color_$344",
+                      "typeString": "enum Specifications.Color"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 370,
+                  "name": "m",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 389,
+                  "src": "465:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Model_$359",
+                    "typeString": "enum Specifications.Model"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 369,
+                    "name": "Model",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 359,
+                    "src": "465:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Model_$359",
+                      "typeString": "enum Specifications.Model"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 373,
+                  "name": "ch",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 389,
+                  "src": "474:9:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[] memory"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 371,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "474:4:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 372,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "474:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[] storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "455:29:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 375,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "492:0:4"
+            },
+            "scope": 406,
+            "src": "432:137:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 396,
+              "nodeType": "Block",
+              "src": "610:29:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 394,
+                    "name": "color",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 361,
+                    "src": "627:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Color_$344",
+                      "typeString": "enum Specifications.Color"
+                    }
+                  },
+                  "functionReturnParameters": 393,
+                  "id": 395,
+                  "nodeType": "Return",
+                  "src": "620:12:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 397,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "getColor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 390,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "592:2:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 393,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 392,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 397,
+                  "src": "604:5:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Color_$344",
+                    "typeString": "enum Specifications.Color"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 391,
+                    "name": "Color",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 344,
+                    "src": "604:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Color_$344",
+                      "typeString": "enum Specifications.Color"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "603:7:4"
+            },
+            "scope": 406,
+            "src": "575:64:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 404,
+              "nodeType": "Block",
+              "src": "680:29:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 402,
+                    "name": "model",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 363,
+                    "src": "697:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Model_$359",
+                      "typeString": "enum Specifications.Model"
+                    }
+                  },
+                  "functionReturnParameters": 401,
+                  "id": 403,
+                  "nodeType": "Return",
+                  "src": "690:12:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 405,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "getModel",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 398,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "662:2:4"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 401,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 400,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 405,
+                  "src": "674:5:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Model_$359",
+                    "typeString": "enum Specifications.Model"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 399,
+                    "name": "Model",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 359,
+                    "src": "674:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Model_$359",
+                      "typeString": "enum Specifications.Model"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "673:7:4"
+            },
+            "scope": 406,
+            "src": "645:64:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 407,
+        "src": "25:686:4"
+      }
+    ],
+    "src": "0:712:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-22T15:48:36.008Z"
+}
