@@ -43,6 +43,10 @@ contract Fabric {
         legal = addr;
     }
 
+    function getAddress() returns (address){
+        return legal;
+    }
+
     function getCar(uint price, Specifications.Model model, Specifications.Color color) public returns (Car){
 
         uint[] storage characteristics;
