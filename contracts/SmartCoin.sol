@@ -11,5 +11,6 @@ contract SmartCoin is MintableToken {
 
     function SmartCoin(){
 
+
     }
 }

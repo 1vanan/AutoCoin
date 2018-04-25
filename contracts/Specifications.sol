@@ -1,11 +1,17 @@
 pragma solidity ^0.4.0;
 
 contract Specifications {
+    uint[] characteristics;
+
     uint public mileage = characteristics[0];
 
     uint public pigeonholesStatus = characteristics[1];
 
     uint public carcassStatus = characteristics[2];
+
+    uint public crashes = characteristics[3];
+
+    uint public checkUp = characteristics[4];
 
     enum Color {RED, BLUE, YELLOW, WHITE, BLACK}
 
@@ -15,8 +21,6 @@ contract Specifications {
     Color color;
 
     Model model;
-
-    uint[] characteristics;
 
     function Specifications(Color c, Model m, uint[] ch) public {
         color = c;

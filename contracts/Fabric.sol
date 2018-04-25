@@ -2,6 +2,7 @@ pragma solidity ^0.4.0;
 
 import './Car.sol';
 import './Specifications.sol';
+import "./Insurance.sol";
 
 contract Fabric {
     mapping(uint => uint) public priceList;
@@ -29,10 +30,8 @@ contract Fabric {
         priceList[uint(Specifications.Model.GAZ)] = 3200;
     }
 
-    function mintCar(uint price, Specifications spec) private returns (Car){
-        require(priceList[uint(spec.getModel())] < price);
-
-        return new Car(spec);
+    function mintCar(Specifications spec, Insurance ins) private returns (Car){
+        return new Car(spec, this, ins);
     }
 
     function getPrice(Specifications.Model model) returns (uint){
@@ -47,8 +46,7 @@ contract Fabric {
         return legal;
     }
 
-    function getCar(uint price, Specifications.Model model, Specifications.Color color) public returns (Car){
-
+    function getCar(Specifications.Model model, Specifications.Color color, Insurance i) public returns (Car){
         uint[] storage characteristics;
 
         characteristics.push(0);
@@ -57,8 +55,12 @@ contract Fabric {
 
         Specifications spec = new Specifications(color, model, characteristics);
 
-        return mintCar(price, spec);
+        return mintCar(spec, i);
 
+    }
+
+    function isCarAvailable(uint amount, Specifications.Model model) returns(bool){
+        return amount > priceList[uint(model)];
     }
 
 }
