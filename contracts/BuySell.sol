@@ -5,9 +5,9 @@ import "github.com/Arachnid/solidity-stringutils/src/strings.sol";
 contract BuySell {
 
     constructor(){
-    models["VW"] = Model.VW;
-    models["SKODA"] = Model.SKODA;
-    models["MERCEDES"] = Model.MERCEDES;
+        models["VW"] = Model.VW;
+        models["SKODA"] = Model.SKODA;
+        models["MERCEDES"] = Model.MERCEDES;
     }
 
     enum Model {
@@ -33,13 +33,7 @@ contract BuySell {
     string[] vins;
 
     function buyCar(string model) public payable {
-        string storage vin;
-
-        bool carIsAvailable = geMostRelevantCar(models[model], vin);
-
-        require(carIsAvailable);
-
-        Car storage carOnSell = availableCars[vin];
+        Car storage carOnSell = availableCars[geMostRelevantCar(models[model])];
 
         require(msg.value == carOnSell.price);
 
@@ -50,11 +44,9 @@ contract BuySell {
         carOnSell.owner = msg.sender;
     }
 
-    function geMostRelevantCar(Model model, string vin) private
-    returns (bool){
-        Car bestCar;
-        bool wasFound = false;
+    function geMostRelevantCar(Model model) private returns (string){
         string vinOfRelevantCar;
+        bool wasFound = false;
 
         for (uint i = 0; i < vins.length; i++) {
             vinOfRelevantCar = vins[i];
@@ -62,14 +54,13 @@ contract BuySell {
             Car probCar = availableCars[vinOfRelevantCar];
 
             if (probCar.carModel == model) {
-                vin = vinOfRelevantCar;
-
                 wasFound = true;
 
-                break;
+                return vinOfRelevantCar;
             }
         }
-        return wasFound;
+
+        require(wasFound);
     }
 
     function getCarsOfGivenModel(Model model) private returns (string[]){
