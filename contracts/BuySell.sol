@@ -5,9 +5,9 @@ import "github.com/ethereum/dapp-bin/library/stringUtils.sol";
 contract BuySell {
 
     constructor(){
-        models["VW"] = Model.VW;
-        models["SKODA"] = Model.SKODA;
-        models["LEXUS"] = Model.LEXUS;
+    models["VW"] = Model.VW;
+    models["SKODA"] = Model.SKODA;
+    models["LEXUS"] = Model.LEXUS;
     }
 
     enum Model {
@@ -21,9 +21,11 @@ contract BuySell {
 
         Model carModel;
 
-        uint price;
+        uint[] priceHistory;//save price history
 
         uint ownersCount;
+
+        bool onSale;
     }
 
     mapping(string => Car) availableCars;
@@ -35,13 +37,21 @@ contract BuySell {
     function buyCar(string model) public payable {
         Car storage carOnSell = availableCars[geMostRelevantCar(models[model])];
 
-        require(msg.value == carOnSell.price);
+        uint[] storage prices = carOnSell.priceHistory;
+
+        require(msg.value == prices[prices.length - 1]);
 
         carOnSell.owner.transfer(msg.value);
 
-        carOnSell.ownersCount ++;
+        carOnSell.ownersCount++;
 
         carOnSell.owner = msg.sender;
+    }
+
+    function sellCar(string vin, uint price) public {
+        availableCars[vin].onSale = true;
+
+        availableCars[vin].priceHistory.push(price);
     }
 
     function geMostRelevantCar(Model model) private returns (string){
@@ -63,14 +73,24 @@ contract BuySell {
         require(wasFound);
     }
 
-    function getCarsOfGivenModel(Model model) private returns (string[]){
-
-    }
+    // function getCarsOfGivenModel(Model model) public returns (string[]){
+    //     string[] neededVins;
+    //     for(uint i = 0; i < vins.length; i++){
+    //         string vin = vins[i];
+    //         if(availableCars[vin].carModel == model)
+    //             neededVins.push(vin);
+    //     }
+    // }
 
     function offerCar(string vin, uint price) public {
         require(!carAlreadyExist(vin));
 
-        availableCars[vin] = Car(msg.sender, checkModel(vin), price, 1);
+        uint[] newPriceHistory;
+
+        newPriceHistory.push(price);
+
+        availableCars[vin] = Car(msg.sender, checkModel(vin), newPriceHistory,
+            1, true);
 
         vins.push(vin);
     }
