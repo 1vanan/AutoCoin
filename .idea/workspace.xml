@@ -11300,9 +11300,16 @@
       <file leaf-file-name="BuySell.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/BuySell.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-738">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="90">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-181805" />
           </provider>
         </entry>
       </file>
@@ -11347,6 +11354,8 @@
     <findStrings>
       <find>mapping</find>
       <find>Fabric</find>
+      <find>HEAD</find>
+      <find>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -12023,6 +12032,11 @@
             <path>
               <item name="autoCoin" type="b2602c69:ProjectViewProjectNode" />
               <item name="autoCoin" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autoCoin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autoCoin" type="462c0819:PsiDirectoryNode" />
               <item name="contracts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -12142,12 +12156,12 @@
       <updated>1524137140536</updated>
       <workItem from="1524137142331" duration="40735000" />
       <workItem from="1525953928867" duration="4138000" />
-      <workItem from="1526312330936" duration="8446000" />
+      <workItem from="1526312330936" duration="9788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53319000" />
+    <option name="totallyTimeSpent" value="54661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -12452,10 +12466,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181805" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BuySell.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-738">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>

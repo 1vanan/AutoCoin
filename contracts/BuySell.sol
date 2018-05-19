@@ -1,19 +1,19 @@
 pragma solidity ^0.4.24;
 
-import "github.com/Arachnid/solidity-stringutils/src/strings.sol";
+import "github.com/ethereum/dapp-bin/library/stringUtils.sol";
 
 contract BuySell {
 
     constructor(){
         models["VW"] = Model.VW;
         models["SKODA"] = Model.SKODA;
-        models["MERCEDES"] = Model.MERCEDES;
+        models["LEXUS"] = Model.LEXUS;
     }
 
     enum Model {
         VW,
         SKODA,
-        MERCEDES
+        LEXUS
     }
 
     struct Car {
@@ -70,7 +70,7 @@ contract BuySell {
     function offerCar(string vin, uint price) public {
         require(!carAlreadyExist(vin));
 
-        availableCars[vin] = Car(msg.sender, CheckModel(vin), price, 1);
+        availableCars[vin] = Car(msg.sender, checkModel(vin), price, 1);
 
         vins.push(vin);
     }
@@ -84,12 +84,30 @@ contract BuySell {
             return true;
     }
 
-    function CheckModel(string vin) private returns (Model){
-        return Model.VW;
+    function checkModel(string vin) private returns (Model){
+        string memory modelStr = substring(vin, 3, 4);
+
+        if (StringUtils.equal(modelStr, "W"))
+            return models["WV"];
+
+        if (StringUtils.equal(modelStr, "B"))
+            return models["SKODA"];
+
+        if (StringUtils.equal(modelStr, "8"))
+            return models["LEXUS"];
     }
 
-    function calculatePrice(uint vin) private returns (uint){
-        return 10;
+    function substring(string str, uint startIndex, uint endIndex) private
+    constant returns (string) {
+        bytes memory strBytes = bytes(str);
+
+        bytes memory result = new bytes(endIndex - startIndex);
+
+        for (uint i = startIndex; i < endIndex; i++) {
+            result[i - startIndex] = strBytes[i];
+        }
+
+        return string(result);
     }
 
     function checkCarOwner(string carVin) public constant returns (address){
