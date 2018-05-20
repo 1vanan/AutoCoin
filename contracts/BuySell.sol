@@ -2,12 +2,12 @@ pragma solidity ^0.4.24;
 
 import "github.com/ethereum/dapp-bin/library/stringUtils.sol";
 
-contract BuySell {
+contract BuySell {//TODO: requires
 
     constructor(){
-    models["VW"] = Model.VW;
-    models["SKODA"] = Model.SKODA;
-    models["LEXUS"] = Model.LEXUS;
+        models["VW"] = Model.VW;
+        models["SKODA"] = Model.SKODA;
+        models["LEXUS"] = Model.LEXUS;
     }
 
     enum Model {
@@ -17,15 +17,19 @@ contract BuySell {
     }
 
     struct Car {
-        address owner;
-
         Model carModel;
 
-        uint[] priceHistory;//save price history
+        uint[] priceHistory;
 
-        uint ownersCount;
+        address[] ownersHistory;
+
+        uint[] mileageHistory;
+
+        uint[] statusHistory;
 
         bool onSale;
+
+        uint ownerCount;
     }
 
     mapping(string => Car) availableCars;
@@ -39,19 +43,31 @@ contract BuySell {
 
         uint[] storage prices = carOnSell.priceHistory;
 
-        require(msg.value == prices[prices.length - 1]);
+        address[] storage owners = carOnSell.ownersHistory;
 
-        carOnSell.owner.transfer(msg.value);
+        // require(msg.value == prices[prices.length - 1]);
 
-        carOnSell.ownersCount++;
+        owners[owners.length - 1].transfer(msg.value);
 
-        carOnSell.owner = msg.sender;
+        owners.push(msg.sender);
+
+        carOnSell.ownerCount++;
+
+        carOnSell.onSale = false;
     }
 
-    function sellCar(string vin, uint price) public {
-        availableCars[vin].onSale = true;
+    function sellCar(string vin, uint milleage, uint price, uint status)
+    public {
+        Car storage sellingCar = availableCars[vin];
+        sellingCar.onSale = true;
 
-        availableCars[vin].priceHistory.push(price);
+        sellingCar.priceHistory.push(price);
+
+        sellingCar.mileageHistory.push(milleage);
+
+        sellingCar.ownersHistory.push(msg.sender);
+
+        sellingCar.statusHistory.push(status);
     }
 
     function geMostRelevantCar(Model model) private returns (string){
@@ -82,15 +98,29 @@ contract BuySell {
     //     }
     // }
 
-    function offerCar(string vin, uint price) public {
-        require(!carAlreadyExist(vin));
+    function offerCar(string vin, uint milleage, uint price, uint ownerCount,
+        uint status) public {
+        // require(!carAlreadyExist(vin));
 
-        uint[] newPriceHistory;
+        uint[] storage newPriceHistory;
+
+        uint[] storage newMilleageHistory;
+
+        uint[] storage newStatusHistory;
+
+        address[] storage newOwnersHistory;
 
         newPriceHistory.push(price);
 
-        availableCars[vin] = Car(msg.sender, checkModel(vin), newPriceHistory,
-            1, true);
+        newMilleageHistory.push(milleage);
+
+        newStatusHistory.push(status);
+
+        newOwnersHistory.push(msg.sender);
+
+        availableCars[vin] = Car(checkModel(vin), newPriceHistory,
+            newOwnersHistory, newMilleageHistory, newStatusHistory,
+            true, ownerCount);
 
         vins.push(vin);
     }
@@ -98,7 +128,7 @@ contract BuySell {
     function carAlreadyExist(string vin) private returns (bool){
         Car memory offeredCar = availableCars[vin];
 
-        if (offeredCar.ownersCount == 0)
+        if (offeredCar.ownersHistory.length - 1 == 0)
             return false;
         else
             return true;
@@ -133,12 +163,10 @@ contract BuySell {
     function checkCarOwner(string carVin) public constant returns (address){
         Car car = availableCars[carVin];
 
-        return car.owner;
+        return car.ownersHistory[car.ownersHistory.length - 1];
     }
 
     function checkOwners(string carVin) public constant returns (uint){
-        Car car = availableCars[carVin];
-
-        return car.ownersCount;
+        return availableCars[carVin].ownerCount;
     }
 }
