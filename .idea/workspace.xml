@@ -14,8 +14,8 @@
       <file leaf-file-name="BuySell.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/BuySell.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="216" column="1" selection-start-line="216" selection-start-column="1" selection-end-line="216" selection-end-column="1" />
+            <state relative-caret-position="3705">
+              <caret line="247" column="1" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -23,7 +23,7 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10803" />
+            <state relative-caret-position="-10788" />
           </provider>
         </entry>
       </file>
@@ -298,12 +298,12 @@
       <updated>1524137140536</updated>
       <workItem from="1524137142331" duration="40735000" />
       <workItem from="1525953928867" duration="4138000" />
-      <workItem from="1526312330936" duration="11739000" />
+      <workItem from="1526312330936" duration="12380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56612000" />
+    <option name="totallyTimeSpent" value="57253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -610,13 +610,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10803" />
+        <state relative-caret-position="-10788" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BuySell.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="216" column="1" selection-start-line="216" selection-start-column="1" selection-end-line="216" selection-end-column="1" />
+        <state relative-caret-position="3705">
+          <caret line="247" column="1" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
         </state>
       </provider>
     </entry>
