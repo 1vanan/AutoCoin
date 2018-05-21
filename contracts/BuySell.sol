@@ -2,22 +2,11 @@ pragma solidity ^0.4.24;
 
 import "github.com/ethereum/dapp-bin/library/stringUtils.sol";
 
-contract BuySell {//TODO: requires
-
-    constructor(){
-        models["VW"] = Model.VW;
-        models["SKODA"] = Model.SKODA;
-        models["LEXUS"] = Model.LEXUS;
-    }
-
-    enum Model {
-        VW,
-        SKODA,
-        LEXUS
-    }
+//TODO: fix function getCarsOfGivenModel()
+contract BuySell {
 
     struct Car {
-        Model carModel;
+        string carModel;
 
         uint[] priceHistory;
 
@@ -34,20 +23,25 @@ contract BuySell {//TODO: requires
 
     mapping(string => Car) availableCars;
 
-    mapping(string => Model) models;
-
     string[] vins;
 
-    function buyCar(string model) public payable {
-        Car storage carOnSell = availableCars[geMostRelevantCar(models[model])];
+    function buyCar(string model, uint status) public payable {
+        Car storage carOnSell = availableCars[getMostRelevantCar(model,
+            status)];
 
         uint[] storage prices = carOnSell.priceHistory;
 
         address[] storage owners = carOnSell.ownersHistory;
 
-        // require(msg.value == prices[prices.length - 1]);
+        uint[] storage statuses = carOnSell.statusHistory;
 
-        owners[owners.length - 1].transfer(msg.value);
+        require(carOnSell.onSale);
+
+        require(msg.value == prices[prices.length - 1]);
+
+        require(statuses[statuses.length - 1] >= status);
+
+        carOnSell.ownersHistory[carOnSell.ownersHistory.length - 1].transfer(msg.value);
 
         owners.push(msg.sender);
 
@@ -56,12 +50,43 @@ contract BuySell {//TODO: requires
         carOnSell.onSale = false;
     }
 
+    function getMostRelevantCar(string modelStr, uint status) constant public
+    returns (string){
+        bool wasFound = false;
+
+        Car memory probCar;
+
+        string memory probVin;
+
+        for (uint i = 0; i < vins.length; i++) {
+            probVin = vins[i];
+            probCar = availableCars[probVin];
+
+            if (StringUtils.equal(probCar.carModel, modelStr) && probCar.statusHistory[probCar.
+            statusHistory.length - 1] >= status) {
+                wasFound = true;
+
+                return vins[i];
+            }
+        }
+
+        require(wasFound);
+    }
+
     function sellCar(string vin, uint milleage, uint price, uint status)
     public {
+        require(carAlreadyExist(vin));
+
         Car storage sellingCar = availableCars[vin];
+
         sellingCar.onSale = true;
 
         sellingCar.priceHistory.push(price);
+
+        uint lastMileage = sellingCar.mileageHistory[sellingCar.mileageHistory.
+        length - 1];
+
+        require(milleage >= lastMileage);
 
         sellingCar.mileageHistory.push(milleage);
 
@@ -70,57 +95,18 @@ contract BuySell {//TODO: requires
         sellingCar.statusHistory.push(status);
     }
 
-    function geMostRelevantCar(Model model) private returns (string){
-        string vinOfRelevantCar;
-        bool wasFound = false;
-
-        for (uint i = 0; i < vins.length; i++) {
-            vinOfRelevantCar = vins[i];
-
-            Car probCar = availableCars[vinOfRelevantCar];
-
-            if (probCar.carModel == model) {
-                wasFound = true;
-
-                return vinOfRelevantCar;
-            }
-        }
-
-        require(wasFound);
-    }
-
-    // function getCarsOfGivenModel(Model model) public returns (string[]){
-    //     string[] neededVins;
-    //     for(uint i = 0; i < vins.length; i++){
-    //         string vin = vins[i];
-    //         if(availableCars[vin].carModel == model)
-    //             neededVins.push(vin);
-    //     }
-    // }
-
     function offerCar(string vin, uint milleage, uint price, uint ownerCount,
         uint status) public {
-        // require(!carAlreadyExist(vin));
+        require(!carAlreadyExist(vin));
+        Car memory car = Car(checkModel(vin), new uint[](0), new address[](0),
+            new uint[](0), new uint[](0), true, ownerCount);
 
-        uint[] storage newPriceHistory;
+        availableCars[vin] = car;
 
-        uint[] storage newMilleageHistory;
-
-        uint[] storage newStatusHistory;
-
-        address[] storage newOwnersHistory;
-
-        newPriceHistory.push(price);
-
-        newMilleageHistory.push(milleage);
-
-        newStatusHistory.push(status);
-
-        newOwnersHistory.push(msg.sender);
-
-        availableCars[vin] = Car(checkModel(vin), newPriceHistory,
-            newOwnersHistory, newMilleageHistory, newStatusHistory,
-            true, ownerCount);
+        availableCars[vin].priceHistory.push(price);
+        availableCars[vin].mileageHistory.push(milleage);
+        availableCars[vin].statusHistory.push(status);
+        availableCars[vin].ownersHistory.push(msg.sender);
 
         vins.push(vin);
     }
@@ -128,23 +114,26 @@ contract BuySell {//TODO: requires
     function carAlreadyExist(string vin) private returns (bool){
         Car memory offeredCar = availableCars[vin];
 
-        if (offeredCar.ownersHistory.length - 1 == 0)
-            return false;
-        else
+        if (offeredCar.ownersHistory.length >= 1)
             return true;
+        else
+            return false;
     }
 
-    function checkModel(string vin) private returns (Model){
+    function checkModel(string vin) constant public returns (string){
         string memory modelStr = substring(vin, 3, 4);
 
-        if (StringUtils.equal(modelStr, "W"))
-            return models["WV"];
+        if (StringUtils.equal(modelStr, "W")) {
+            return "VW";
+        }
 
-        if (StringUtils.equal(modelStr, "B"))
-            return models["SKODA"];
+        if (StringUtils.equal(modelStr, "B")) {
+            return "SKODA";
+        }
 
-        if (StringUtils.equal(modelStr, "8"))
-            return models["LEXUS"];
+        if (StringUtils.equal(modelStr, "8")) {
+            return "LEXUS";
+        }
     }
 
     function substring(string str, uint startIndex, uint endIndex) private
@@ -160,13 +149,73 @@ contract BuySell {//TODO: requires
         return string(result);
     }
 
-    function checkCarOwner(string carVin) public constant returns (address){
-        Car car = availableCars[carVin];
+    function getCarOwner(string carVin) public constant returns (address){
+        Car memory car = availableCars[carVin];
+
+        require(car.onSale);
 
         return car.ownersHistory[car.ownersHistory.length - 1];
     }
 
-    function checkOwners(string carVin) public constant returns (uint){
-        return availableCars[carVin].ownerCount;
+    function getOwnersCount(string carVin) public constant returns (uint){
+        Car memory car = availableCars[carVin];
+
+        require(car.onSale);
+
+        return car.ownerCount;
+    }
+
+    function getPrice(string carVin) public constant returns (uint){
+        Car memory car = availableCars[carVin];
+
+        require(car.onSale);
+
+        return car.priceHistory[car.priceHistory.length - 1];
+    }
+
+    function getMileage(string carVin) public constant returns (uint){
+        Car memory car = availableCars[carVin];
+
+        require(car.onSale);
+
+        return car.mileageHistory[car.mileageHistory.length - 1];
+    }
+
+    function getStatus(string carVin) public constant returns (uint){
+        Car memory car = availableCars[carVin];
+
+        require(car.onSale);
+
+        return car.statusHistory[car.statusHistory.length - 1];
+    }
+
+    function getAllCarsCount() public constant returns (uint){
+        return vins.length;
+    }
+
+    function getCarModel(string vin) public constant returns (string){
+        Car memory car = availableCars[vin];
+
+        require(car.onSale);
+
+        return car.carModel;
+    }
+
+    function getCarsOfGivenModel(string model) constant public
+    returns (uint[]){
+        uint[] memory neededVinNums = new uint[](5);
+
+        for (uint i = 0; i < vins.length; i++) {
+            string memory vin = vins[i];
+
+            if (StringUtils.equal(availableCars[vin].carModel, model))
+                neededVinNums[i] = i;
+        }
+
+        return neededVinNums;
+    }
+
+    function getVinByNum(uint num) constant public returns (string vin){
+        return vins[num];
     }
 }
