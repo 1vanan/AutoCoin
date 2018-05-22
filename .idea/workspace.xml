@@ -14,8 +14,8 @@
       <file leaf-file-name="BuySell.sol" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contracts/BuySell.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3705">
-              <caret line="247" column="1" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
+            <state relative-caret-position="3870">
+              <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -298,12 +298,12 @@
       <updated>1524137140536</updated>
       <workItem from="1524137142331" duration="40735000" />
       <workItem from="1525953928867" duration="4138000" />
-      <workItem from="1526312330936" duration="12380000" />
+      <workItem from="1526312330936" duration="13085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57253000" />
+    <option name="totallyTimeSpent" value="57958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -615,8 +615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/BuySell.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3705">
-          <caret line="247" column="1" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
+        <state relative-caret-position="3870">
+          <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
         </state>
       </provider>
     </entry>

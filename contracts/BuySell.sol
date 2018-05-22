@@ -44,7 +44,10 @@ contract BuySell {
 
         require(statuses[statuses.length - 1] >= status);
 
-        carOnSell.ownersHistory[carOnSell.ownersHistory.length - 1].transfer(msg.value);
+        carOnSell.ownersHistory[carOnSell.ownersHistory.length - 1].
+        transfer(msg.value);
+
+        require(transferKeys(vins[carOnSell.blockchainCount - 1], msg.sender));
 
         owners.push(msg.sender);
 
@@ -76,6 +79,14 @@ contract BuySell {
         require(wasFound);
     }
 
+    function transferKeys(string vin, address newOwner) private returns (bool){
+        Car memory car = availableCars[vin];
+
+        address prevOwner = car.ownersHistory[car.ownersHistory.length - 1];
+
+        return true;
+    }
+
     function sellCar(string vin, uint milleage, uint price, uint status)
     public {
         require(carAlreadyExist(vin));
@@ -83,6 +94,8 @@ contract BuySell {
         require(checkStatus(vin, milleage, status));
 
         Car storage sellingCar = availableCars[vin];
+
+        require(!sellingCar.onSale);
 
         sellingCar.onSale = true;
 
@@ -98,6 +111,17 @@ contract BuySell {
         sellingCar.ownersHistory.push(msg.sender);
 
         sellingCar.statusHistory.push(status);
+    }
+
+    function offSale(string vin) public {
+        require(carAlreadyExist(vin));
+
+        Car storage sellingCar = availableCars[vin];
+
+        require(sellingCar.ownersHistory[sellingCar.ownersHistory.length - 1]
+            == msg.sender);
+
+        sellingCar.onSale = false;
     }
 
     function offerCar(string vin, uint milleage, uint price, uint ownerCount,
@@ -117,19 +141,6 @@ contract BuySell {
         availableCars[vin].mileageHistory.push(milleage);
         availableCars[vin].statusHistory.push(status);
         availableCars[vin].ownersHistory.push(msg.sender);
-    }
-
-    function removeCar(string vin) public {
-        require(carAlreadyExist(vin));
-
-        Car memory sellingCar = availableCars[vin];
-
-        require(sellingCar.ownersHistory[sellingCar.ownersHistory.length - 1]
-            == msg.sender);
-
-        delete availableCars[vin];
-
-        delete vins[sellingCar.blockchainCount - 1];
     }
 
     function checkStatus(string vin, uint milleage, uint status) private
