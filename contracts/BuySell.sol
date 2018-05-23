@@ -3,7 +3,6 @@ pragma solidity ^0.4.24;
 import "github.com/ethereum/dapp-bin/library/stringUtils.sol";
 
 //TODO: fix function getCarsOfGivenModel()
-//TODO: getMostRelevantCar должен выбирать авто с наивысшим статусом, а возвращать bool
 contract BuySell {
 
     struct Car {
@@ -64,19 +63,38 @@ contract BuySell {
 
         string memory probVin;
 
+        string[] carsWithGoodStatus;
+
+        string bestCar;
+
         for (uint i = 0; i < vins.length; i++) {
             probVin = vins[i];
             probCar = availableCars[probVin];
 
-            if (StringUtils.equal(probCar.carModel, modelStr) && probCar.statusHistory[probCar.
-            statusHistory.length - 1] >= status) {
+            if (StringUtils.equal(probCar.carModel, modelStr) &&
+            probCar.statusHistory[probCar.statusHistory.length - 1] >= status) {
                 wasFound = true;
 
-                return vins[i];
+                carsWithGoodStatus.push(vins[i]);
             }
         }
 
+        for (uint j = 1; j < carsWithGoodStatus.length; j++) {
+            uint currentStatus = availableCars[carsWithGoodStatus[j]].
+            statusHistory[availableCars[carsWithGoodStatus[j]].
+            statusHistory.length - 1];
+
+            uint prevStatus = availableCars[carsWithGoodStatus[j - 1]].
+            statusHistory[availableCars[carsWithGoodStatus[j - 1]].
+            statusHistory.length - 1];
+
+            if (currentStatus >= prevStatus)
+                bestCar = carsWithGoodStatus[j];
+        }
+
         require(wasFound);
+
+        return bestCar;
     }
 
     function transferKeys(string vin, address newOwner) private returns (bool){
