@@ -2,7 +2,6 @@ pragma solidity ^0.4.24;
 
 import "github.com/ethereum/dapp-bin/library/stringUtils.sol";
 
-//TODO: fix function getCarsOfGivenModel()
 contract BuySell {
 
     struct Car {
@@ -257,7 +256,7 @@ contract BuySell {
         return car.carModel;
     }
 
-    function getCarsOfGivenModel(string model) constant public
+    function getCarsByModel(string model) constant public
     returns (uint[]){
         uint[] memory neededVinNums = new uint[](5);
 
